@@ -7,12 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public title: string = 'Mi Primera clase';
-  public counter: number = 10;
-
-  increaseby(value: number): void {//void no regresa nada
-    this.counter += value;
-  }
-  reset() {
-    this.counter = 10
-  }
 }
