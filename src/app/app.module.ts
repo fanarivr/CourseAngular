@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CounterModule } from './counter/counter.module';
 import { HeroModule } from './heroes/heros.module';
+import { DbzModule } from './dbz/dbz.module';
 
 @NgModule({
   declarations: [
@@ -11,10 +12,12 @@ import { HeroModule } from './heroes/heros.module';
    // HeroComponent,
    // ListComponent// ruta del componente
   ],
-  imports: [// cuando se import de otro componete
+  imports: [// cuando se import de otro componetes MODULES
     BrowserModule,
     CounterModule,
-    HeroModule
+    HeroModule,
+    DbzModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
