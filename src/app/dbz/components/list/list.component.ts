@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { Character } from '../../interfaces/character.interface';
 
 @Component({
@@ -12,5 +12,20 @@ export class ListComponent {
     name: 'Trunk',
     power: 10
 
-  }]
+  }];
+
+@Output()
+  public onDelete:EventEmitter<string>=new EventEmitter();
+// onDelete=Index value:number
+  //delete character by index number and emit event to parent component for refreshing the list of characters
+
+
+  OnDeleteCharacter(index?:string):void{
+   // console.log(this.CharacterLis[index]);
+
+   if (!index) return;
+
+   this.onDelete.emit(index)//emite evento
+   console.log(index)
+  }
 }

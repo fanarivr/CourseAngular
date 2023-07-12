@@ -4,12 +4,24 @@
 <div class="row">
 
   <div class="col">
-    <dbz-list [CharacterLis]="characters"></dbz-list>
+    <dbz-list [CharacterLis]="dbzService.characters" (onDelete)="dbzService.deleteCharacterById($event)"></dbz-list>
+    <!--
+      [CharacterLis]------mostrar la lista de un padre de Listcomponent hijo
+      characters----------Padre de [CharacterLis] en main page
+      (onDelete)----------Es un evento para eliminar
+
+      Eventos: Parentesis-- escuchar enevto
+      input: padre a hijo, atributo: llaves cuadradas    -->
   </div>
 
   <div class="col">
 
-    <dbz-add-character></dbz-add-character>
+    <dbz-add-character (onNewCharacter)="dbzService.onNewCharacter($event)"></dbz-add-character>
+
+    <!--
+      (onNewCharacter)--- Agregar nuevos elemntos a la list addChracter.component
+      onNewCharacter($event)---Elementos los recibe mainpage.component
+     -->
   </div>
 
 </div>

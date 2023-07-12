@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MainPageComponent } from './pages/main-page.component';
 import { ListComponent } from './components/list/list.component';
 import { AddCharacterComponent } from './components/addCharacter/addCharacter.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -16,7 +17,8 @@ import { AddCharacterComponent } from './components/addCharacter/addCharacter.co
   exports:[MainPageComponent],// CLASE DECLARADA E IMPORTADA
 
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class DbzModule { }// Clase a ser exportada para acceder a ella desde cualquier lugar
