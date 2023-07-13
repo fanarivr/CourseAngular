@@ -4,7 +4,7 @@
 <div class="row">
 
   <div class="col">
-    <dbz-list [CharacterLis]="dbzService.characters" (onDelete)="dbzService.deleteCharacterById($event)"></dbz-list>
+    <dbz-list [CharacterLis]="characters" (onDelete)=" onDeleteCharacter($event)"></dbz-list>
     <!--
       [CharacterLis]------mostrar la lista de un padre de Listcomponent hijo
       characters----------Padre de [CharacterLis] en main page
@@ -16,7 +16,7 @@
 
   <div class="col">
 
-    <dbz-add-character (onNewCharacter)="dbzService.onNewCharacter($event)"></dbz-add-character>
+    <dbz-add-character (onNewCharacter)="OnNewCharacter($event)"></dbz-add-character>
 
     <!--
       (onNewCharacter)--- Agregar nuevos elemntos a la list addChracter.component
