@@ -26,17 +26,15 @@ export class DbzService {
   ];
 
  addCharacter(character:Character):void{
-
-    // const newCharacter:Character={
-    //   id:uuid(),
-    //   name:character.name,
-    //   power:character.power
-    // }
-
     const newCharacter:Character={id:uuid(),...character}
     this.characters.push(newCharacter);
 
   }
+   // const newCharacter:Character={
+    //   id:uuid(),
+    //   name:character.name,
+    //   power:character.power
+    // }
 
   // onDeleteCharacter(index:number){//remover posición
   //   this.characters.splice(index,1);
